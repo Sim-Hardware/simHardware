@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Work — SIM HARDWARE</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">SIM<span>HARDWARE</span></a>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Home</a>
+      <a href="index.html#products">Products</a>
+      <a href="gallery.html" class="active">Gallery</a>
+      <a href="index.html#about">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a href="https://wa.me/260977526613" class="btn btn-steel header-cta">Chat on WhatsApp</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<section class="page-hero" style="background-image: linear-gradient(180deg, rgba(30,42,54,0.55), rgba(30,42,54,0.9)), url('images/gallery-radian-cabinets.jpg');">
+  <div class="page-hero-inner">
+    <p class="hero-kicker">Our Work</p>
+    <h1>See the quality for yourself.</h1>
+    <p class="hero-sub">A look at real installations — glass cabinets, aluminium, mirrors, and shelving fitted for homes, shops, and national retailers across Lusaka.</p>
+  </div>
+</section>
+
+<section class="full-gallery">
+  <div class="full-gallery-grid">
+    <figure>
+      <div class="oval"><img src="images/ab.jpeg" alt="Aluminium framed door installation"></div>
+      <figcaption>Glass cabinet</figcaption>
+    </figure>
+    <figure>
+      <div class="oval"><img src="images/pr.png" alt="Glass sliding door installation"></div>
+      <figcaption>Glass sliding door</figcaption>
+    </figure>
+    <figure>
+      <div class="oval"><img src="images/bc.jpeg" alt="Glass display cabinets in a retail store"></div>
+      <figcaption>Glass display cabinets for retail</figcaption>
+    </figure>
+    <figure>
+      <div class="oval"><img src="images/gallery-radian-cabinets.jpg" alt="Glass display cabinets built for Radian Stores"></div>
+      <figcaption>Cabinets built for Radian Stores</figcaption>
+    </figure>
+    <figure>
+      <div class="oval"><img src="images/gallery-pharmacy-shelving.jpg" alt="Glass shelving installed in a pharmacy"></div>
+      <figcaption>Pharmacy glass shelving</figcaption>
+    </figure>
+    <figure>
+      <div class="oval"><img src="images/cabinet.png" alt="Glass shelving installed in a pharmacy"></div>
+      <figcaption>Glass display</figcaption>
+    </figure>
+  </div>
+</section>
+
+<div class="quote-wrap">
+  <section class="quote-cta">
+    <h2>Like what you see?</h2>
+    <p>Get in touch and we'll quote your project — no obligation.</p>
+    <div class="hero-actions">
+      <a href="contact.html" class="btn btn-light">Request a Quote</a>
+    </div>
+  </section>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <p class="logo footer-logo">SIM<span>HARDWARE</span></p>
+      <p>Shop No. K23, Town Centre, Lusaka</p>
+      <p>Aluminium · Clear Glass · Obscure · Mirror Glass · Window Putty · Window Handles</p>
+    </div>
+    <div>
+      <p class="footer-title">Contact</p>
+      <p>Cell: 0977 526613 / 0966 545553</p>
+      <a href="https://wa.me/260977526613" class="footer-link">WhatsApp Us</a>
+    </div>
+    <div>
+      <p class="footer-title">Pages</p>
+      <a href="index.html" class="footer-link">Home</a>
+      <a href="gallery.html" class="footer-link">Gallery</a>
+      <a href="contact.html" class="footer-link">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const menuToggle = document.getElementById('menuToggle');
+  const mainNav = document.getElementById('mainNav');
+  menuToggle.addEventListener('click', () => {
+    mainNav.classList.toggle('open');
+    menuToggle.classList.toggle('open');
+  });
+</script>
+
+</body>
+</html>

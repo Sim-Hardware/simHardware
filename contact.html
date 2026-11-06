@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact & Get a Quote — SIM HARDWARE</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">SIM<span>HARDWARE</span></a>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Home</a>
+      <a href="index.html#products">Products</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="index.html#about">About</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+    <a href="https://wa.me/260977526613" class="btn btn-steel header-cta">Chat on WhatsApp</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<section class="page-hero" style="background-image: linear-gradient(180deg, rgba(30,42,54,0.55), rgba(30,42,54,0.9)), url('images/gallery-aluminium-door.jpg');">
+  <div class="page-hero-inner">
+    <p class="hero-kicker">Contact Us</p>
+    <h1>Let's talk about your project.</h1>
+    <p class="hero-sub">Reach us directly on WhatsApp, call the shop, or fill in the quick form below and we'll message you back.</p>
+  </div>
+</section>
+
+<section class="contact-section">
+  <div class="contact-grid">
+
+    <div class="contact-info">
+      <h2>Get in touch</h2>
+      <a class="contact-line" href="https://wa.me/260977526613">
+        <span class="contact-label">WhatsApp</span>
+        <span class="contact-value">+260 977 526 613</span>
+      </a>
+      <a class="contact-line" href="tel:+260977526613">
+        <span class="contact-label">Call</span>
+        <span class="contact-value">+260 977 526 613 / +260 966 545 553</span>
+      </a>
+      <div class="contact-line">
+        <span class="contact-label">Visit</span>
+        <span class="contact-value">Shop No. K23, Town Centre, Lusaka</span>
+      </div>
+      <a href="https://wa.me/260977526613" class="btn btn-steel contact-whatsapp-btn">Chat on WhatsApp Now</a>
+    </div>
+
+    <div class="contact-form-wrap">
+      <h2>Request a Quote</h2>
+      <p class="form-note">Fill this in and it'll open WhatsApp with your details ready to send — nothing is sent until you hit send in WhatsApp.</p>
+      <form id="quoteForm">
+        <label>Your Name
+          <input type="text" id="qName" required placeholder="e.g. Mulenga Phiri">
+        </label>
+        <label>Phone Number
+          <input type="tel" id="qPhone" required placeholder="e.g. 0977 000000">
+        </label>
+        <label>What do you need?
+          <select id="qType">
+            <option>Glass cabinets</option>
+            <option>Aluminium work</option>
+            <option>Clear glass</option>
+            <option>Obscure glass</option>
+            <option>Mirror glass</option>
+            <option>Window putty / handles</option>
+            <option>Other / not sure</option>
+          </select>
+        </label>
+        <label>Project Details
+          <textarea id="qDetails" rows="4" placeholder="Size, location, and any other details"></textarea>
+        </label>
+        <button type="submit" class="btn btn-steel">Send via WhatsApp</button>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <p class="logo footer-logo">SIM<span>HARDWARE</span></p>
+      <p>Shop No. K23, Town Centre, Lusaka</p>
+      <p>Aluminium · Clear Glass · Obscure · Mirror Glass · Window Putty · Window Handles</p>
+    </div>
+    <div>
+      <p class="footer-title">Contact</p>
+      <p>Cell: +260 977 526 613 / +260 966 545 553</p>
+      <a href="https://wa.me/260977526613" class="footer-link">WhatsApp Us</a>
+    </div>
+    <div>
+      <p class="footer-title">Pages</p>
+      <a href="index.html" class="footer-link">Home</a>
+      <a href="gallery.html" class="footer-link">Gallery</a>
+      <a href="contact.html" class="footer-link">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const menuToggle = document.getElementById('menuToggle');
+  const mainNav = document.getElementById('mainNav');
+  menuToggle.addEventListener('click', () => {
+    mainNav.classList.toggle('open');
+    menuToggle.classList.toggle('open');
+  });
+
+  document.getElementById('quoteForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const name = document.getElementById('qName').value.trim();
+    const phone = document.getElementById('qPhone').value.trim();
+    const type = document.getElementById('qType').value;
+    const details = document.getElementById('qDetails').value.trim();
+
+    let message = `Hi SIM HARDWARE, I'd like a quote.\n\nName: ${name}\nPhone: ${phone}\nJob type: ${type}`;
+    if (details) message += `\nDetails: ${details}`;
+
+    const url = `https://wa.me/260977526613?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
+  });
+</script>
+
+</body>
+</html>
